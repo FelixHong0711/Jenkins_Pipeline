@@ -13,13 +13,13 @@ pipeline{
             }
             post{
                 success{
-                    emailext to: 'felixhong0720@gmail.com',
+                    mail to: 'felixhong0720@gmail.com',
                     subject: 'Unit and Integration Tests Status Email',
                     body: 'The tests are successful',
                     attachLog: true
                 }
                 failure{
-                    emailext to: 'felixhong0720@gmail.com',
+                    mail to: 'felixhong0720@gmail.com',
                     subject: 'Unit and Integration Tests Status Email',
                     body: 'The tests are failed',
                     attachLog: true
@@ -37,13 +37,13 @@ pipeline{
             }
             post{
                 success{
-                    emailext to: 'felixhong0720@gmail.com',
+                    mail to: 'felixhong0720@gmail.com',
                     subject: 'Security Scan Status Email',
                     body: 'The security scan is successful',
                     attachLog: true
                 }
                 failure{
-                    emailext to: 'felixhong0720@gmail.com',
+                    mail to: 'felixhong0720@gmail.com',
                     subject: 'Security Scan Status Email',
                     body: 'The security scan is failed',
                     attachLog: true
